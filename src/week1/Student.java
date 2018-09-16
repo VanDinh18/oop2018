@@ -6,11 +6,16 @@ public class Student {
 
     // TODO: khai báo các phương thức getter, setter cho Student
 
-    /**
-     * Constructor 1
-     */
+    private String name;
+    private String id;
+    private String group;
+    private String email;
+
     Student() {
-        // TODO:
+        name = "Student";
+        id = "000";
+        group = "INT22041";
+        email = "uet@vnu.edu.vn";
     }
 
     /**
@@ -20,7 +25,10 @@ public class Student {
      * @param em
      */
     Student(String n, String sid, String em) {
-        // TODO:
+        name = n;
+        id = sid;
+        group = "INT22042";
+        email = em;
     }
 
     /**
@@ -28,11 +36,44 @@ public class Student {
      * @param s
      */
     Student(Student s) {
-        // TODO:
+        name = s.name;
+        id = s.id;
+        group = s.group;
+        email = s.email;
     }
 
-    String getInfo() {
-        // TODO:
-        return null; // xóa dòng này sau khi cài đặt
+    public String getName() {
+        return name;
+    }
+    public void setName(String n) {
+        name = n;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public void setId(String i) {
+        id = i;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+    public void setGroup(String g){
+        group = g;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String em){
+        email = em;
+    }
+
+    public void getInfo(){
+        System.out.println(name);
+        System.out.println(id);
+        System.out.println(group);
+        System.out.println(email);
     }
 }
