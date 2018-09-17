@@ -25,10 +25,10 @@ public class Student {
      * @param em
      */
     Student(String n, String sid, String em) {
-        name = n;
-        id = sid;
-        group = "INT22042";
-        email = em;
+        this.name = n;
+        this.id = sid;
+        this.group = "INT22042";
+        this.email = em;
     }
 
     /**
@@ -36,10 +36,10 @@ public class Student {
      * @param s
      */
     Student(Student s) {
-        name = s.name;
-        id = s.id;
-        group = s.group;
-        email = s.email;
+        this.name = s.name;
+        this.id = s.id;
+        this.group = s.group;
+        this.email = s.email;
     }
 
     public String getName() {
@@ -70,10 +70,7 @@ public class Student {
         email = em;
     }
 
-    public void getInfo(){
-        System.out.println(name);
-        System.out.println(id);
-        System.out.println(group);
-        System.out.println(email);
+    public String getInfo(){
+        return name + id + group + email;
     }
 }

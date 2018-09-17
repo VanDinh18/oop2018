@@ -26,12 +26,12 @@ public class StudentManagement {
         s1.setGroup("INT22041");
         s1.setEmail("nguyendinh180299@gmail.com");
         System.out.println(s1.getName());
-        s1.getInfo();
+        System.out.println(s1.getInfo());
 
         Student s2 = new Student("Dinh", "17020683", "nguyendinh180299@gmail.com");
-        s2.getInfo();
+        System.out.println(s2.getInfo());
 
         Student s3 = new Student(s1);
-        s3.getInfo();
+        System.out.println(s3.getInfo());
     }
 }
