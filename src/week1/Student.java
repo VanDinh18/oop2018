@@ -46,31 +46,31 @@ public class Student {
         return name;
     }
     public void setName(String n) {
-        name = n;
+        this.name = n;
     }
 
     public String getId() {
         return id;
     }
     public void setId(String i) {
-        id = i;
+        this.id = i;
     }
 
     public String getGroup() {
         return group;
     }
     public void setGroup(String g){
-        group = g;
+        this.group = g;
     }
 
     public String getEmail(){
         return email;
     }
     public void setEmail(String em){
-        email = em;
+        this.email = em;
     }
 
     public String getInfo(){
-        return name + id + group + email;
+        return name + " " + id + " " + group + " " + email;
     }
 }
