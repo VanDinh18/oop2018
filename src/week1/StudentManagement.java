@@ -1,11 +1,9 @@
 package week1;
-import java.util.ArrayList;
 
 public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
 
-    //public ArrayList<Student> student = new ArrayList<Student>(100);
     public Student[] student = new Student[3];
 
     public boolean sameGroup(Student s1, Student s2) {
@@ -31,7 +29,6 @@ public class StudentManagement {
         for(int i=0; i<count; i++){
             System.out.println(student[i].getInfo());
         }
-
     }
 
     public static void main(String[] args) {
