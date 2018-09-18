@@ -4,30 +4,34 @@ import java.util.ArrayList;
 public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
-    public ArrayList<Student> student = new ArrayList<Student>(100);
+
+    //public ArrayList<Student> student = new ArrayList<Student>(100);
+    public Student[] student = new Student[3];
 
     public boolean sameGroup(Student s1, Student s2) {
         return (s1.getGroup().equals(s2.getGroup()));
     }
 
     void studentsByGroup() {
-        for(int i=0; i<student.size(); i++){
-            if(student.get(i).getGroup().equals("INT22041")) {
-                System.out.println(student.get(i).getInfo());
+        for(int i=0; i<student.length; i++){
+            if ("INT22041".equals(student[i].getGroup())) {
+                System.out.println(student[i].getInfo());
             }
         }
-        System.out.println("\n");
     }
 
     void removeStudent(String id) {
-        for(int i=0; i<student.size(); i++){
-            if(student.get(i).getId().equals(id)){
-                student.remove(i);
+        int count=0;
+        for(int i=0; i<student.length; i++){
+            if(student[i].getId().equals(id) == false){
+                student[count] = student[i];
+                count++;
             }
         }
-        for(int i=0; i<student.size(); i++){
-            System.out.println(student.get(i).getName() + "\t");
+        for(int i=0; i<count; i++){
+            System.out.println(student[i].getInfo());
         }
+
     }
 
     public static void main(String[] args) {
@@ -36,7 +40,6 @@ public class StudentManagement {
         s1.setId("17020683");
         s1.setGroup("INT22041");
         s1.setEmail("nguyendinh180299@gmail.com");
-        //System.out.println(s1.getName());
         //System.out.println(s1.getInfo());
 
         Student s2 = new Student("Dinh 2", "17020663", "nguyendinh180299@gmail.com");
@@ -47,9 +50,9 @@ public class StudentManagement {
 
         StudentManagement sv = new StudentManagement();
 
-        sv.student.add(0, s1);
-        sv.student.add(1, s2);
-        sv.student.add(2, s3);
+        sv.student[0] = s1;
+        sv.student[1] = s2;
+        sv.student[2] = s3;
         sv.studentsByGroup();
         sv.removeStudent("17020683");
     }
