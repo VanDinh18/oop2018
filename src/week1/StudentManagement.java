@@ -51,6 +51,11 @@ public class StudentManagement {
         sv.student[1] = s2;
         sv.student[2] = s3;
         sv.studentsByGroup();
+        if(sv.sameGroup(s1, s3)){
+            System.out.println("Học cùng lớp");
+        }
+        else
+            System.out.println("Học khác lớp");
         sv.removeStudent("17020683");
     }
 }
