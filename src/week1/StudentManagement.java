@@ -45,17 +45,17 @@ public class StudentManagement {
         Student s3 = new Student(s1);
         //System.out.println(s3.getInfo());
 
-        StudentManagement sv = new StudentManagement();
+        StudentManagement sm = new StudentManagement();
 
-        sv.student[0] = s1;
-        sv.student[1] = s2;
-        sv.student[2] = s3;
-        sv.studentsByGroup();
-        if(sv.sameGroup(s1, s3)){
+        sm.student[0] = s1;
+        sm.student[1] = s2;
+        sm.student[2] = s3;
+        sm.studentsByGroup();
+        if(sm.sameGroup(s1, s3)){
             System.out.println("Học cùng lớp");
         }
         else
             System.out.println("Học khác lớp");
-        sv.removeStudent("17020683");
+        sm.removeStudent("17020683");
     }
 }
