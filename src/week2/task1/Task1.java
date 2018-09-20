@@ -20,7 +20,7 @@ public class Task1 {
             return fibonacci(n-1)+ fibonacci(n-2);
         return 0;
     }
-    
+
     public static void main(String[] args){
         System.out.println(gcd(4, 2));
         System.out.println(fibonacci(5));
