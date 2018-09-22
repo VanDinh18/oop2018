@@ -120,7 +120,7 @@ class mySchool{
 
 }
 class Lamp {
-    // thuộc tính đèn bật/tắt, màu sắc, độ cao 
+    // thuộc tính đèn bật/tắt, màu sắc, độ cao
     private boolean isOn;
     private String colour;
     private int high;
