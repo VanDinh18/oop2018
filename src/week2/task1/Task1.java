@@ -4,6 +4,8 @@ public class Task1 {
 
     public static int gcd(int a, int b) {
         // TODO: Tính ước chung lớn nhất của 2 số a, b
+        a = Math.abs(a);
+        b = Math.abs(b);
         if(a == b)
             return a;
         if(a > b)
@@ -22,7 +24,7 @@ public class Task1 {
     }
 
     public static void main(String[] args){
-        System.out.println(gcd(4, 2));
+        System.out.println(gcd(-8, 16));
         System.out.println(fibonacci(5));
     }
 }
