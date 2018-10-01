@@ -105,9 +105,10 @@ public class Fraction {
             System.out.println(f.numerator + "/" + f.denominator);
     }
 
-    public boolean equals(Fraction obj){
+    public boolean equals(Object obj){
+        Fraction other = (Fraction)obj;
         float other1 = (float)this.numerator / (float)this.denominator;
-        float other2 = (float)obj.numerator / (float)obj.denominator;
+        float other2 = (float)((Fraction) obj).numerator / (float)((Fraction) obj).denominator;
         if(other1 == other2)
             return true;
         else
