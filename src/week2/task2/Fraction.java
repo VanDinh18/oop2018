@@ -115,7 +115,7 @@ public class Fraction {
     }
 
     public static void main(String[] args){
-        Fraction f1 = new Fraction(-3, 4);
+        Fraction f1 = new Fraction(3, 4);
         Fraction f2 = new Fraction(1, 4);
 
         Fraction f3 = f2.add(f1);
