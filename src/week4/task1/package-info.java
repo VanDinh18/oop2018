@@ -7,3 +7,17 @@
  * @version 0.1
  */
 package week4.task1;
+
+class Main{
+    public static void main(String[] args) {
+        HoaQua hoaQua = new HoaQua("tron", "do");
+        hoaQua.giaBan();
+        hoaQua.soLuong();
+        hoaQua.nguonGoc();
+
+        Tao tao = new Tao("tron", "do", "ngot");
+        Cam cam = new Cam("tron", "xanh", "chua");
+        CamSanh camSanh = new CamSanh("tron", "xanh", "chua", "vo day");
+        CamThanhPhong camThanhPhong = new CamThanhPhong("tron", "xanh", "chua", "vo mong");
+    }
+}
