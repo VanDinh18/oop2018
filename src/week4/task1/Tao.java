@@ -11,11 +11,21 @@ public class Tao extends HoaQua{
         this.muiVi = muiVi;
     }
 
+    /**
+     *
+     * @param hinhDang
+     * @param mauSac
+     * @param muiVi
+     */
     public Tao(String hinhDang, String mauSac, String muiVi){
         super(hinhDang, mauSac);
         this.muiVi = muiVi;
     }
 
+    /**
+     * Kiểm tra mui vị
+     * @param muiVi
+     */
     public void muiVi(String muiVi){
         if("chua".equals(muiVi))
             System.out.println("Quả tao chua");
@@ -23,6 +33,10 @@ public class Tao extends HoaQua{
             System.out.println("Quả tao ngọt");
     }
 
+    /**
+     *
+     * @return soLuong
+     */
     public double soLuong(){
         double soLuong;
         soLuong = super.soLuong();

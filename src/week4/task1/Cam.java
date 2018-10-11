@@ -11,11 +11,21 @@ public class Cam extends HoaQua{
         this.muiVi = muiVi;
     }
 
+    /**
+     *
+     * @param hinhDang
+     * @param mauSac
+     * @param muiVi
+     */
     public Cam(String hinhDang, String mauSac, String muiVi) {
         super(hinhDang, mauSac);
         this.muiVi = muiVi;
     }
 
+    /**
+     * kiểm tra cam ngot không?
+     * @param muiVi
+     */
     public void muiVi(String muiVi){
         if("chua".equals(muiVi))
             System.out.println("Quả cam chua");
@@ -23,6 +33,10 @@ public class Cam extends HoaQua{
             System.out.println("Quả cam ngọt");
     }
 
+    /**
+     *
+     * @return giaBan
+     */
     public double giaBan(){
         double giaBan;
         giaBan = super.giaBan();

@@ -1,14 +1,27 @@
 package week4.task2;
 
 public class Square extends Rectangle{
+    /**
+     * Contructor1
+     */
     public Square(){
     }
 
+    /**
+     * Contructor 2
+     * @param side
+     */
     public Square(double side){
         super.setWidth(side);
         super.setLength(side);
     }
 
+    /**
+     * Contructor3
+     * @param color
+     * @param filled
+     * @param side
+     */
     public Square(String color, boolean filled, double side) {
         super.setColor(color);
         super.setFilled(filled);
@@ -33,6 +46,10 @@ public class Square extends Rectangle{
         super.setLength(side);
     }
 
+    /**
+     *
+     * @return toString
+     */
     public String toString(){
         return super.toString();
     }
