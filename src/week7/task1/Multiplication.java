@@ -1,8 +1,7 @@
 package week7.task1;
 
-public class Addition extends BinaryExpression{
-
-    public Addition(Expression left, Expression right) {
+public class Multiplication extends BinaryExpression {
+    public Multiplication(Expression left, Expression right){
         super(left, right);
     }
 
@@ -13,6 +12,6 @@ public class Addition extends BinaryExpression{
 
     @Override
     public int evaluate() {
-        return left.evaluate() + right.evaluate();
+        return left.evaluate() * right.evaluate();
     }
 }
