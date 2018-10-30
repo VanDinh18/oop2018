@@ -11,7 +11,7 @@ public class Numeral extends Expression{
 
     @Override
     public String toString() {
-        return null;
+        return String.format("%d", value);
     }
 
     @Override

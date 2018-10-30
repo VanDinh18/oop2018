@@ -9,11 +9,11 @@ public class Square extends Expression{
 
     @Override
     public String toString() {
-        return null;
+        return String.format("(%s)^2", expression);
     }
 
     @Override
     public int evaluate() {
-        return 0;
+        return (int) Math.pow(expression.evaluate(), 2);
     }
 }
