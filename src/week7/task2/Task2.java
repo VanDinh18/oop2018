@@ -1,10 +1,8 @@
 package week7.task2;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Task2 {
     public void NullPointerExceptionTest() throws NullPointerException{
@@ -36,54 +34,72 @@ public class Task2 {
         String s = (String)i;
     }
 
-    public void IOExceptionTest() throws IOException{
-        BufferedReader br = null;
-        br = new BufferedReader(new FileReader("D:/word.txt"));
-        //br = new BufferedReader(new FileReader("D:/words.txt"));
-        String line;
-        while ((line = br.readLine()) != null){
-            System.out.println(line);
-        }
+//    public void IOExceptionTest() throws IOException{
+//        BufferedReader br = null;
+//        br = new BufferedReader(new FileReader("D:/word.txt"));
+//        //br = new BufferedReader(new FileReader("D:/words.txt"));
+//        String line;
+//        while ((line = br.readLine()) != null){
+//            System.out.println(line);
+//        }
+//        throw new IOException();
+//    }
+
+    public void IOExceptionTest()throws IOException{
+        String resource = "D://word.txt";
+        File file = new File(resource);
+        if (file.exists())
+            System.out.println("exists");
         throw new IOException();
     }
+    public void FileNotFoundExceptionTest() throws FileNotFoundException{
+        Scanner scanner = new Scanner(new File("D:/word.txt"));
+        throw new FileNotFoundException();
+    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Task2 task2 = new Task2();
         try {
             task2.NullPointerExceptionTest();
         }
         catch (NullPointerException e){
-            System.err.println(e.getMessage());
+            System.err.println(e);
         }
 
         try{
             task2.ArrayIndexOutOfBoundsExceptionTest();
         }
         catch (ArrayIndexOutOfBoundsException e){
-            System.err.println(e.getStackTrace());
+            System.err.println(e);
         }
 
         try {
             task2.ArithmeticExceptionTest();
         }
         catch(ArithmeticException e){
-            System.err.println(e.getStackTrace());
+            System.err.println(e);
         }
 
         try {
             task2.ClassCastExceptionTest();
         }
         catch (ClassCastException e){
-            System.err.println(e.getStackTrace());
+            System.err.println(e);
         }
 
         try {
             task2.IOExceptionTest();
         }
         catch(IOException e){
-            System.err.println(e.getMessage());
+            System.err.println(e);
         }
 
+        try {
+            task2.FileNotFoundExceptionTest();
+        }
+        catch (FileNotFoundException e){
+            System.err.println(e);
+        }
     }
 
 

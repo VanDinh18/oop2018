@@ -20,7 +20,7 @@ public class ExpressionTest {
             System.out.println(div1.evaluate());
         }
         catch(ArithmeticException e){
-            System.out.println(e);
+            System.err.println(e);
         }
 
     }
