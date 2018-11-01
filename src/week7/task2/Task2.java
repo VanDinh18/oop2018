@@ -52,12 +52,13 @@ public class Task2 {
             System.out.println("exists");
         throw new IOException();
     }
+
     public void FileNotFoundExceptionTest() throws FileNotFoundException{
         Scanner scanner = new Scanner(new File("D:/word.txt"));
         throw new FileNotFoundException();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         Task2 task2 = new Task2();
         try {
             task2.NullPointerExceptionTest();
@@ -101,6 +102,4 @@ public class Task2 {
             System.err.println(e);
         }
     }
-
-
 }
