@@ -84,7 +84,20 @@ public class Utils {
         }
     }
     public static File findFileByName(String folderPath, String fileName){
-        return null;
+        File dir = new File(folderPath);
+        FilenameFilter filter = new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.startsWith(fileName);
+            }
+        };
+
+        String [] listFile = dir.list(filter);
+        if(listFile.length == 0){
+            System.out.println("Not file!");
+        }
+        File f = new File(folderPath + "\\" + fileName);
+        return f;
     }
 
     public static void main(String[] args) {
@@ -93,5 +106,9 @@ public class Utils {
         writeContentToFile_C(path);
         System.out.println(readContentFromFile(path));
 
+        String folderPath = "D:";
+        String fileName = "pathname.txt";
+        File f = findFileByName(folderPath, fileName);
+        System.out.println(f.getAbsolutePath());
     }
 }
