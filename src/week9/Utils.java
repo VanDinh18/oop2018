@@ -31,7 +31,7 @@ public class Utils {
                 file.createNewFile();
             }
 
-            f = new FileWriter(file.getAbsoluteFile());
+            f = new FileWriter(file.getAbsoluteFile(), true);
             b = new BufferedWriter(f);
             b.write(data);
 
@@ -106,7 +106,7 @@ public class Utils {
         writeContentToFile_C(path);
         System.out.println(readContentFromFile(path));
 
-        String folderPath = "D:";
+        String folderPath = "C:";
         String fileName = "pathname.txt";
         File f = findFileByName(folderPath, fileName);
         System.out.println(f.getAbsolutePath());
