@@ -33,7 +33,7 @@ public class Task2 {
             float number = (float) rd.nextInt(1000)+ (float) rd.nextFloat();
             array[i] = number;
         }
-        
+
         bubbleSort(array);
     }
 }
