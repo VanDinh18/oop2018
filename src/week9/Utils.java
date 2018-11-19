@@ -1,11 +1,10 @@
 package week9;
-
+//
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-
+//
 public class Utils {
     private static final String path = "D:\\pathname.txt";
     private static final String path2 = "D:\\pathname2.txt";
@@ -20,7 +19,7 @@ public class Utils {
         }
         return content;
     }
-
+//
     public static void writeContentToFile_B(String path){
         FileWriter f = null;
         BufferedWriter b = null;
@@ -50,7 +49,7 @@ public class Utils {
             }
         }
     }
-
+//
     public static void writeContentToFile_C(String path){
         FileWriter f = null;
         BufferedWriter b = null;
@@ -63,7 +62,6 @@ public class Utils {
             f = new FileWriter(file.getAbsoluteFile(), true);
             b = new BufferedWriter(f);
             b.write(data);
-
         }
         catch(IOException e){
             e.printStackTrace();
@@ -80,7 +78,7 @@ public class Utils {
             }
         }
     }
-
+//
     public static File findFileByName(String folderPath, String fileName){
         File dir = new File(folderPath);
         FilenameFilter filter = new FilenameFilter() {
@@ -96,7 +94,7 @@ public class Utils {
         File f = new File(folderPath + "\\" + fileName);
         return f;
     }
-
+//
     public static void main(String[] args) {
         writeContentToFile_B(path2);
         System.out.println(readContentFromFile(path2));
@@ -107,4 +105,5 @@ public class Utils {
         File f = findFileByName(folderPath, fileName);
         System.out.println(f.getAbsolutePath());
     }
+//
 }
