@@ -1,8 +1,5 @@
 package week11;
 
-import java.util.Arrays;
-
-
 public class Task1 {
     public static <T extends Comparable> void sortArray(T[] a){
         //Arrays.sort(a);
@@ -22,6 +19,7 @@ public class Task1 {
                 }
             }
         }
+
         for(T s : a){
             System.out.println(s);
         }

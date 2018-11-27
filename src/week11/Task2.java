@@ -1,9 +1,6 @@
 package week11;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-
 
 public class Task2 {
     public static  <T extends Comparable> T maxArray(T[] a){
