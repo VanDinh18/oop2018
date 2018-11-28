@@ -4,19 +4,18 @@ public class Leaf implements Component {
     private String name;
     private int age;
     private String sex;
+    private boolean married;
 
-    public Leaf(String name, int age, String sex) {
+    public Leaf(String name, int age, String sex, boolean married) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.married = married;
     }
 
     @Override
     public void print(){
-        System.out.println("----------");
-        System.out.println(getName());
-        System.out.println(getAge());
-        System.out.println(getSex());
+        System.out.println(getName() + "\t" + getAge() + "\t" + getSex() +  "\t" + getMarried());
     }
 
     @Override
@@ -29,12 +28,8 @@ public class Leaf implements Component {
     }
 
     @Override
-    public Component getMarried(){
-        return null;
-    }
-
-    @Override
-    public void addMarried(Component married){
+    public boolean getMarried(){
+        return married;
     }
 
     @Override

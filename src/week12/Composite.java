@@ -9,48 +9,44 @@ public class Composite implements Component {
     private String name;
     private int age;
     private String sex;
+    private boolean married;
 
-    private List<Component> ListChild = new ArrayList<>();
-    private Component married;
+    private List<Component> Member = new ArrayList<>();
 
-
-    public Composite(String name, int age, String sex) {
+    public Composite(String name, int age, String sex, boolean married) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.married = married;
     }
+
     @Override
     public void print(){
-        System.out.println(getName() + " " + getAge() + " " + getSex());
-        System.out.println(getMarried().getName() + " " + getMarried().getAge() + " " + getMarried().getSex());
-        System.out.println("List Child:");
-        Iterator<Component> ChildIterator = ListChild.iterator();
-        while(ChildIterator.hasNext()){
-            Component c = ChildIterator.next();
+        System.out.println(getName() + "\t" + getAge() + "\t" + getSex() + "\t" + getMarried());
+
+        Iterator<Component> MemberIterator = Member.iterator();
+
+        while(MemberIterator.hasNext()){
+            Component c = MemberIterator.next();
             c.print();
         }
-
     }
 
     @Override
     public Component getChild(int i){
-        return ListChild.get(i);
+        return Member.get(i);
     }
 
     @Override
     public void addChild(Component child){
-        ListChild.add(child);
+        Member.add(child);
     }
 
     @Override
-    public Component getMarried(){
+    public boolean getMarried(){
         return married;
     }
 
-    @Override
-    public void addMarried(Component married){
-        this.married = married;
-    }
     @Override
     public String getName() {
         return name;

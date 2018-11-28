@@ -2,23 +2,24 @@ package week12;
 
 public class Task1 {
     public static void main(String[] args) {
-        Component C1 = new Leaf("con1", 30, "nam");
-        Component C2 = new Leaf("con2", 28, "nu");
-        Component B = new Composite("bo", 50, "nam");
-        Component M = new Leaf("vo", 48, "nu");
-        B.addChild(C1);
-        B.addChild(C2);
-        B.addMarried(M);
-        B.print();
-
-        Component C11 = new Leaf("con11", 10, "nam");
-        Component C12 = new Leaf("con12", 12, "nam");
-        Component C13 = new Leaf("con13", 15, "nam");
-        Component VC1 = new Leaf("vo cua c1", 27, "nu");
+        Component C11 = new Leaf("con1 cua c1", 10, "nam", false);
+        Component C12 = new Leaf("con2 cua c1", 18, "nu", false);
+        Component C1 = new Composite("con cua b1, bo cua c11 c12", 30, "nam", true);
         C1.addChild(C11);
         C1.addChild(C12);
-        C1.addChild(C13);
-        C1.addMarried(VC1);
-        C1.print();
+
+
+        Component C2 = new Composite("con cua b1, không có con, có vợ", 32, "nu", true);
+
+
+        Component C3 = new Composite("con cua b1, không có con, không vợ", 38, "nam", false);
+
+        Component B1 = new Composite("bo", 50, "nam", true);
+
+        B1.addChild(C1);
+        B1.addChild(C2);
+        B1.addChild(C3);
+
+        B1.print();
     }
 }
