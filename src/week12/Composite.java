@@ -1,6 +1,7 @@
 package week12;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Composite implements Component {
@@ -12,10 +13,23 @@ public class Composite implements Component {
     private List<Component> ListChild = new ArrayList<>();
     private Component married;
 
+
     public Composite(String name, int age, String sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+    }
+    @Override
+    public void print(){
+        System.out.println(getName() + " " + getAge() + " " + getSex());
+        System.out.println(getMarried().getName() + " " + getMarried().getAge() + " " + getMarried().getSex());
+        System.out.println("List Child:");
+        Iterator<Component> ChildIterator = ListChild.iterator();
+        while(ChildIterator.hasNext()){
+            Component c = ChildIterator.next();
+            c.print();
+        }
+
     }
 
     @Override

@@ -12,6 +12,14 @@ public class Leaf implements Component {
     }
 
     @Override
+    public void print(){
+        System.out.println("----------");
+        System.out.println(getName());
+        System.out.println(getAge());
+        System.out.println(getSex());
+    }
+
+    @Override
     public Component getChild(int i){
         return null;
     }
