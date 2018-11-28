@@ -3,7 +3,8 @@ package week12;
 public class BubbleSort implements SortBehavior{
     @Override
     public void sort() {
-        int [] a = SortArray.array;
+        SortArray sortArray = new SortArray();
+        int [] a = sortArray.getArray();
         int n = a.length;
 
         boolean isBoolean = true;

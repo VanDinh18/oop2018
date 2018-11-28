@@ -1,22 +1,24 @@
 package week12;
 
-public abstract class SortArray {
-    SortBehavior sortBehavior;
+public class SortArray {
+    SortBehavior BubbleSortBehavior;
+    SortBehavior OptionSortBehavior;
 
-    public static int[] array = {1, 3, 2, 10, 5, 7, 4};
+    private int[] array = {1, 3, 2, 10, 5, 7, 4};
 
+    public int[] getArray(){
+        return this.array;
+    }
 
     //public abstract void print();
 
-    public void performSort(){
-        sortBehavior.sort();
+    public void performBubbleSort(){
+        BubbleSortBehavior.sort();
     }
 
-    public SortBehavior getSortBehavior() {
-        return sortBehavior;
+    public void performOptionSort(){
+        OptionSortBehavior.sort();
     }
 
-    public void setSortBehavior(SortBehavior sortBehavior) {
-        this.sortBehavior = sortBehavior;
-    }
+
 }
